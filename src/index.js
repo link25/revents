@@ -8,8 +8,10 @@ import App from './app/layout/App';
 import * as serviceWorker from './serviceWorker';
 import { configureStore } from './app/store/configureStore';
 import  ScrolToTop  from "./app/common/util/ScrolToTop";
+import { loadEvents } from "./features/event/eventActions";
 
 const store = configureStore();
+store.dispatch(loadEvents());
 const rootEl = document.getElementById('root');
 
 let render = () => {
