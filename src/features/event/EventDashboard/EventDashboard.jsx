@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { Grid} from "semantic-ui-react";
 import EventList from "../EventList/EventList";
-import { deleteEvent } from '../eventActions'
+import { deleteEvent } from '../eventActions';
+import  EventActivity  from "../EventActivity/EventActivity";
 import LoadingComponent from "../../../app/layout/LoadingComponent";
 
 const mapState = (state) => ({
@@ -36,7 +37,7 @@ class EventDashboard extends Component {
           />
         </Grid.Column>
         <Grid.Column width={6}>
-
+          <EventActivity/>
         </Grid.Column>
       </Grid>
     );
